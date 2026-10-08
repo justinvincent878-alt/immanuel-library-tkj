@@ -46,7 +46,9 @@
             </select>
             <button type="submit" class="btn btn-outline btn-sm">Cari</button>
           </form>
-          <a href="create.php" class="btn btn-primary">+ Tambah Buku</a>
+          <a href="../../actions/books/destroy.php?id=<?= $book['id']; ?>" 
+   onclick="return confirm('Apakah Anda yakin ingin menghapus buku ini?');" 
+   class="btn btn-danger btn-sm">Hapus</a>
         </div>
 
         <div class="data-card">
