@@ -1,3 +1,20 @@
+<?php
+$pageTitle = "Edit Buku";
+$pageSubtitle = "Ubah data buku";
+require_once __DIR__ . "/../../repositories/book-repository.php";
+if (function_exists('getBook')) {
+    $book = getBook();
+} else {
+    $book = [
+        'id' => $_GET['id'] ?? 1,
+        'title' => 'Sample Book',
+        'category' => 'Fiksi',
+        'authors' => 'Penulis',
+        'stock' => 10
+    ];
+}
+require_once __DIR__ . "/../../components/admin/topbar.php";
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
