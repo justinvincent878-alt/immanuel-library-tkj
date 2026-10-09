@@ -20,24 +20,24 @@ require_once __DIR__ . "/../../components/admin/topbar.php";
     
 
       <div class="app-content">
-        <form method="" action="">
-          <div class="form-card">
-            <div class="form-section-title">Data Kategori</div>
-            <div class="form-group">
-              <label for="name">Nama Kategori</label>
-              <input type="text" id="name" name="name" placeholder="Contoh: Fiksi">
-            </div>
-            <div class="form-group">
-              <label for="description">Deskripsi</label>
-              <textarea id="description" name="description" rows="3" placeholder="Deskripsi singkat kategori"></textarea>
-            </div>
+        <form method="POST" action="../../actions/categories/store.php">
+  <div class="form-card">
+    <div class="form-section-title">Data Kategori</div>
+    <div class="form-group">
+      <label for="name">Nama Kategori</label>
+      <input type="text" id="name" name="name" placeholder="Contoh: Fiksi">
+    </div>
+    <div class="form-group">
+      <label for="description">Deskripsi</label>
+      <textarea id="description" name="description" rows="3" placeholder="Deskripsi singkat kategori"></textarea>
+    </div>
 
-            <div class="form-actions">
-              <a href="index.php" class="btn btn-outline">Batal</a>
-              <button type="submit" class="btn btn-primary">Simpan Kategori</button>
-            </div>
-          </div>
-        </form>
+    <div class="form-actions">
+      <a href="index.php" class="btn btn-outline">Batal</a>
+      <button type="submit" class="btn btn-primary">Simpan Kategori</button>
+    </div>
+  </div>
+</form>
       </div>
     </main>
   </div>
