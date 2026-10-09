@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Tambah Buku - Perpustakaan Digital</title>
   <link rel="stylesheet" href="../../styles/books/create.css">
 </head>
+
 <body>
   <?php
-  
-  $categories = ["Fiksi", "Sains", "Sejarah", "Teknologi"];
-  $authors = ["Andrea Hirata", "Tere Liye", "J.K. Rowling", "Pramoedya Ananta Toer", "Sapardi Djoko Damono"];
+  require_once __DIR__ . "/../../repositories/category-repository.php";
+  require_once __DIR__ . "/../../repositories/author-repository.php";
+
+  $categories = getCategories();
+  $authors = getAuthors();
   ?>
   <div class="app-shell">
- <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
+    <?php require_once __DIR__ . "/../../components/admin/sidebar.php" ?>
 
     <main class="app-main">
-   <?php
-$pageTitle = "Tambah Penulis";
-$pageSubtitle = "Daftarkan penulis baru ke sistem";
+      <?php
+      $pageTitle = "Tambah Penulis";
+      $pageSubtitle = "Daftarkan penulis baru ke sistem";
 
-require_once __DIR__ . "/../../components/admin/topbar.php";
-?>
+      require_once __DIR__ . "/../../components/admin/topbar.php";
+      ?>
 
       <div class="app-content">
         <form method="" action="">
@@ -85,4 +89,5 @@ require_once __DIR__ . "/../../components/admin/topbar.php";
     </main>
   </div>
 </body>
+
 </html>

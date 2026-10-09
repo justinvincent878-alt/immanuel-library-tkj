@@ -27,8 +27,11 @@ require_once __DIR__ . "/../../components/admin/topbar.php";
 
 <body>
   <?php
-  $categories = ["Fiksi", "Sains", "Sejarah", "Teknologi"];
-  $authors = ["Andrea Hirata", "Tere Liye", "J.K. Rowling", "Pramoedya Ananta Toer", "Sapardi Djoko Damono"];
+  require_once __DIR__ . "/../../repositories/category-repository.php";
+  require_once __DIR__ . "/../../repositories/author-repository.php";
+
+  $categories = getCategories();
+  $authors = getAuthors();
 
   $book = [
     "id" => 5,
@@ -81,7 +84,8 @@ require_once __DIR__ . "/../../components/admin/topbar.php";
                 <select id="category_id" name="category_id">
                   <?php foreach ($categories as $index => $category): ?>
                     <option value="<?= $index + 1 ?>" <?= ($index + 1) === $book['category_id'] ? 'selected' : '' ?>>
-                      <?= $category ?></option>
+                      <?= $category ?>
+                    </option>
                   <?php endforeach; ?>
                 </select>
               </div>
