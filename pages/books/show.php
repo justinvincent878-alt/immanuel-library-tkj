@@ -1,3 +1,11 @@
+<?php
+$pageTitle = "Detail Buku";
+$pageSubtitle = "Informasi lengkap mengenai buku";
+
+require_once __DIR__ . "/../../repositories/book-repository.php";
+$book = getBook();
+require_once __DIR__ . "/../../components/admin/topbar.php";
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
