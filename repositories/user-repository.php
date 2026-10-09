@@ -17,3 +17,10 @@ function getUser() {
         'status' => 'Aktif'
     ];
 }
+function getProfile() {
+    return [
+        'phone' => '081234567890',
+        'address' => 'Jl. Ahmad Yani No. 45, Pontianak',
+        'bio' => 'Pengelola sistem perpustakaan digital.'
+    ];
+}
